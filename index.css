@@ -32,7 +32,9 @@ body {
 .text-container {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
   position: relative;
 }
 
@@ -46,12 +48,7 @@ body {
 
 .output {
   display: flex;
-}
-
-@media (max-width: 768px) {
-  .output {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
 .figure {

@@ -28,11 +28,9 @@ const state = {
  */
 const slideInText = () => {
   if (subHeadingEl) {
-    subHeadingEl.style.transform = `translateY(${state.translateY}px)`;
     subHeadingEl.style.opacity = `${state.opacity}`;
   }
 
-  state.translateY += 0.25;
   state.opacity += 0.1;
 
   if (state.opacity <= 1) {
@@ -44,10 +42,8 @@ const slideInText = () => {
  * Scales the headline to reach a certain font size
  */
 const transformHeadline = () => {
-  headingEl.style.transform = `translateY(${state.translateY}px)`;
   headingEl.style.opacity = `${state.opacity}`;
 
-  state.translateY += 0.25;
   state.opacity += 0.05;
 
   if (state.opacity <= 1) {
