@@ -51,6 +51,7 @@ const transformHeadline = () => {
   state.opacity += 0.05;
 
   if (state.opacity <= 1) {
+    init();
     animFrame.requestAnimationFrame(transformHeadline);
   }
 
@@ -85,7 +86,6 @@ const updateProgressBar = () => {
 
   if (state.width > 100) {
     hideProgressBar();
-    init();
     transformHeadline();
   }
 };
