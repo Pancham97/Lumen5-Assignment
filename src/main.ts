@@ -56,7 +56,6 @@ const transformHeadline = () => {
 
   if (state.opacity > 1) {
     state.opacity = 0;
-    init();
     animFrame.requestAnimationFrame(slideInText, 2);
   }
 };
@@ -86,6 +85,7 @@ const updateProgressBar = () => {
 
   if (state.width > 100) {
     hideProgressBar();
+    init();
     transformHeadline();
   }
 };
