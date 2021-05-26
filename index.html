@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumen5 Assignment</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="progress-bar-container">
+      <h1>Try switching tabs and coming back</h1>
+      <div id="progress-bar"></div>
+    </div>
+
+    <div class="output">
+      <div class="text-container">
+        <h2 class="heading">
+          Calling requestAnimationFrame to animate this text
+        </h2>
+        <div class="subheading">This was called after 2 second delay</div>
+      </div>
+
+      <figure class="figure hidden">
+        <canvas id="canvas" width="300" height="300"></canvas>
+        <figcaption>
+          Using custom animation method to animate the movement of the Earth and
+          the Moon
+        </figcaption>
+      </figure>
+    </div>
+
+    <script src="bundle/bundle.js"></script>
+  </body>
+</html>

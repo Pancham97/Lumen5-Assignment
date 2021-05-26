@@ -1,0 +1,46 @@
+{
+  "name": "lumen5-assignment",
+  "version": "1.0.0",
+  "description": "A short demo of custom requestAnimationFrame",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"gulp\" \"lite-server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pancham97/Lumen5-Assignment.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "Animation"
+  ],
+  "author": {
+    "name": "Pancham Khaitan",
+    "url": "https://panchamkhaitan.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pancham97/Lumen5-Assignment/issues"
+  },
+  "homepage": "https://github.com/Pancham97/Lumen5-Assignment#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^17.0.0",
+    "concurrently": "^6.2.0",
+    "gulp": "^4.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "lite-server": "^2.6.1",
+    "tsify": "^5.0.4",
+    "typescript": "^4.2.4",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "systemjs": "^6.9.0"
+  }
+}
