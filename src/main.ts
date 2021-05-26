@@ -4,7 +4,10 @@ import { init } from './SolarSystem';
 const animFrame = new AnimationFrame();
 
 const progressBar = document.querySelector<HTMLElement>('#progress-bar');
-const progressBarContainer = document.querySelector<HTMLElement>(
+const progressBarHeadingEl = document.querySelector<HTMLElement>(
+  '.progress-bar--heading'
+);
+const progressBarContainerEl = document.querySelector<HTMLElement>(
   '#progress-bar-container'
 );
 
@@ -58,7 +61,8 @@ const transformHeadline = () => {
 };
 
 const hideProgressBar = () => {
-  progressBarContainer?.classList.add('hidden');
+  progressBarHeadingEl?.classList.add('hidden');
+  progressBarContainerEl?.classList.add('hidden');
 };
 
 /**
@@ -77,7 +81,7 @@ const updateProgressBar = () => {
    only if the width is lesser than 100
   */
   if (state.width <= 100) {
-    animFrame.requestAnimationFrame(updateProgressBar);
+    animFrame.requestAnimationFrame(updateProgressBar, 0.015);
   }
 
   if (state.width > 100) {
