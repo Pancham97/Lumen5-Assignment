@@ -4,7 +4,7 @@
   "description": "A short demo of custom requestAnimationFrame",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine-ts --config=jasmine.json",
     "start": "concurrently \"gulp\" \"lite-server\""
   },
   "repository": {
@@ -31,16 +31,22 @@
     "browserify": "^17.0.0",
     "concurrently": "^6.2.0",
     "gulp": "^4.0.0",
+    "gulp-jasmine-browser": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
+    "jasmine": "^3.7.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jasmine-ts": "^0.3.3",
     "lite-server": "^2.6.1",
+    "ts-node": "^10.0.0",
     "tsify": "^5.0.4",
     "typescript": "^4.2.4",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "@types/jasmine": "^3.7.5",
     "systemjs": "^6.9.0"
   }
 }

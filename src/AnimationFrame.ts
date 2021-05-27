@@ -1,21 +1,11 @@
 /** @fileoverview Declaration of the custom requestAnimationFrame and cancelAnimationFrame methods */
 
-interface ICallback {
-  id?: number;
-  callback: FrameRequestCallback;
-}
-
 export class AnimationFrame {
   frameRate = 60;
   frameInterval = Math.ceil(1000 / this.frameRate);
-  callbackTracker: ICallback;
 
-  constructor() {
-    this.callbackTracker = {
-      id: 0,
-      callback: () => console.log('hello'),
-    };
-  }
+  /** Tracker for all callbacks and their delays */
+  callbackTracker = new Map();
 
   /**
    * Starts the animation based on the callback and optional delay
@@ -25,6 +15,13 @@ export class AnimationFrame {
    */
   requestAnimationFrame(callback: FrameRequestCallback, delay = 0) {
     let hasWaited = false;
+
+    // To prevent negative delays
+    delay = Math.max(0, delay);
+
+    if (!this.callbackTracker.has(callback)) {
+      this.callbackTracker.set(callback, delay);
+    }
 
     // If a delay is specified, call the callback after that delay
     if (delay > 0 && !hasWaited) {
@@ -39,7 +36,6 @@ export class AnimationFrame {
 
       return tickCounter;
     }
-
     return 0;
   }
 
