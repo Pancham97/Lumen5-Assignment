@@ -16,9 +16,12 @@ export function init() {
     figureEl.classList.add('visible');
   }
 
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src =
+    'https://live.mdnplay.dev/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations/canvas_sun.png';
+  moon.src =
+    'https://live.mdnplay.dev/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations/canvas_moon.png';
+  earth.src =
+    'https://live.mdnplay.dev/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations/canvas_earth.png';
   animFrame.requestAnimationFrame(draw);
 }
 
@@ -45,8 +48,8 @@ function draw() {
   ctx.fillRect(0, -12, 40, 24); // Shadow
   ctx.drawImage(earth, -12, -12);
 
-  // Moon
   ctx.save();
+  // Moon
   ctx.rotate(
     ((2 * Math.PI) / 6) * time.getSeconds() +
       ((2 * Math.PI) / 6000) * time.getMilliseconds()
